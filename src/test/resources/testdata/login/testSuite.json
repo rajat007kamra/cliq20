@@ -1,0 +1,24 @@
+{
+  "suites": [
+    {
+      "suiteName": "LOGIN TESTS",
+      "suiteDescription": "LOGIN TESTS",
+      "note": "Login test cases",
+      "testCases": [
+        "src/test/resources/testdata/login/loginTC-001.json",
+        "src/test/resources/testdata/login/loginTC-002.json",
+        "src/test/resources/testdata/login/loginTC-003.json",
+        "src/test/resources/testdata/login/loginTC-004.json",
+        "src/test/resources/testdata/login/loginTC-005.json",      
+        "src/test/resources/testdata/login/loginTC-006.json",
+        "src/test/resources/testdata/login/loginTC-010.json",       
+        "src/test/resources/testdata/login/loginTC-011.json",
+        "src/test/resources/testdata/login/loginTC-013.json",
+        "src/test/resources/testdata/login/loginTC-015.json",
+        "src/test/resources/testdata/login/loginTC-016.json",
+        "src/test/resources/testdata/login/loginTC-017.json",
+        "src/test/resources/testdata/login/loginTC-018.json"
+      ]
+    }
+  ]
+}

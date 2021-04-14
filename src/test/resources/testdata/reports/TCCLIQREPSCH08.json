@@ -1,0 +1,132 @@
+{
+  "testType": "CREATE",
+  "sector": "MEZOCLIQ",
+  "module": "TEMPLATE",
+  "feature": "CREATE REPORT SCHEDULE",
+  "group": "TEST TEMPLATE",
+  "testId": "TCCLIQREPSCH08",
+  "testName": "REPORT SCHEDULE",
+  "testDescription": "CREATE A TEMPLATE TO GENERATE ONE TIME REPORT USING REPORT SCHEDULER",
+  "testObjectives": "CREATE ONE TIME REPORT SCHEDULE",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ADMIN",
+        "process": "TEMPLATES",
+        "column": [
+          {
+            "title": "STATE",
+            "text": "ACTIVE"            
+          },
+          {
+            "title": "TEMPLATE NAME",
+            "text": "ONE-TIME REPORT SCHEDULE"            
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "REVISE-RECORD"
+      
+    },
+    {
+      "name": "CLICK-TRIGGER",
+      "context": {
+        "realm": "ANALYTICS",
+        "flexname": "QUICKLIST",
+        "flyoutname": "REPORT SCHEDULER"
+      }
+    },
+    {
+      "name": "ENTER DATA FORM VIEW",
+      "context": {
+        "column": [
+          {
+            "variable": "FREQUENCY",
+            "value": "ONE-TIME"
+          },
+          {
+            "variable": "START-DATE",
+            "value": "09/07/2020"
+          },
+          {
+            "variable": "HOLIDAY-ADJUSTMENT",
+            "value": "PREVIOUS"
+          },
+          {
+            "variable": "HOURS",
+            "value": "1"
+          },
+          {
+            "variable": "MINUTES",
+            "value": "15"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SUBMIT"
+      
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SUBMIT",
+        "message": "SUBMITTED!"
+      }
+    },
+    {
+      "name": "CLOSE FORM VIEW"
+    },
+    {
+      "name": "CLICK-TRIGGER",
+      "context": {
+        "realm": "ANALYTICS",
+        "flexname": "QUICKLIST",
+        "flyoutname": "REPORT SCHEDULE"
+      }
+    },
+    {
+       "name": "FLYOUT-ROWS-COUNT",
+       "context": {
+         "rowCount": "1"
+       }
+    },
+    {
+      "name": "READ-FLYOUT-DATA",
+      "context": {
+      	"selectRow": "1",
+        "column": [
+          {
+            "title": "PERIOD",
+            "expected": "2020-10-07"
+          },
+          {
+            "title": "START",
+            "expected": "09/07/2020"
+          },
+          {
+            "title": "END",
+            "expected": "10/07/2020"
+          },
+          {
+            "title": "GENERATION",
+            "expected": "10/07/2020 01:15:00"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

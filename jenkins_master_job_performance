@@ -1,0 +1,104 @@
+pipeline {
+    agent none
+    environment {
+    	Browser = "${env.Browser}"
+    	AppUrl = "${env.AppUrl}"
+    	GitBranch = "${env.GitBranch}"
+    	threadCount = "${env.VirtualUsers}"
+    }
+    stages {
+       stage('UI Tests') {
+            failFast true
+            parallel {
+                stage("MACHINE -1") {
+                	agent{label "BOT"}
+                     steps {
+                     	script {
+                     		try {
+                        	    build job: "cliq-20/PERFORMANCE_TM4JEXECUTOR", wait: true,
+                            		parameters: [[$class: 'StringParameterValue', name: 'Browser', value: "${env.Browser}"],
+                             		[$class: 'StringParameterValue', name: 'AppUrl', value: "${env.AppUrl}"],                        		
+                             		[$class: 'StringParameterValue', name: 'category', value: "${env.Category}"],
+									[$class: 'StringParameterValue', name: 'battery', value: "${env.Battery}"],
+									[$class: 'StringParameterValue', name: 'version', value: "${env.Version}"],                        		
+                             		[$class: 'StringParameterValue', name: 'threadCount', value: "${env.VirtualUsers}"],
+                             		[$class: 'StringParameterValue', name: 'GitBranch', value: "${env.GitBranch}"],
+                             		[$class: 'StringParameterValue', name: 'module', value: "${env.Module}"],
+                             		[$class: 'StringParameterValue', name: 'sendEmailTo', value: "testinq@meZocliq.com"]]
+                    		}catch (Exception e) {
+                    			currentBuild.result = 'FAILURE'
+                    		}
+                    	}
+                    }                	
+                }
+                
+                stage("MACHINE -2") {
+                	agent{label "BOT"}
+                     steps {
+                     	script {
+                     		try {                     
+                           		 build job: "cliq-20/PERFORMANCE_TM4JEXECUTOR", wait: true,
+                            		parameters: [[$class: 'StringParameterValue', name: 'Browser', value: "${env.Browser}"],
+                             		[$class: 'StringParameterValue', name: 'AppUrl', value: "${env.AppUrl}"],
+                             		[$class: 'StringParameterValue', name: 'category', value: "${env.Category}"],
+									[$class: 'StringParameterValue', name: 'battery', value: "${env.Battery}"],
+									[$class: 'StringParameterValue', name: 'version', value: "${env.Version}"],                        		
+                             		[$class: 'StringParameterValue', name: 'threadCount', value: "${env.VirtualUsers}"],
+                             		[$class: 'StringParameterValue', name: 'GitBranch', value: "${env.GitBranch}"],
+                             		[$class: 'StringParameterValue', name: 'module', value: "${env.Module}"],
+                             		[$class: 'StringParameterValue', name: 'sendEmailTo', value: "testinq@meZocliq.com"]]
+                     		}catch (Exception e) {
+                    			currentBuild.result = 'FAILURE'
+                    		}
+                    	}
+                    }                	
+                }
+                
+                stage("MACHINE -3") {
+                	agent{label "BOT"}
+                     steps {
+                     	script {
+                     		try {                     
+                           		 build job: "cliq-20/PERFORMANCE_TM4JEXECUTOR", wait: true,
+                            		parameters: [[$class: 'StringParameterValue', name: 'Browser', value: "${env.Browser}"],
+                             		[$class: 'StringParameterValue', name: 'AppUrl', value: "${env.AppUrl}"],
+                             		[$class: 'StringParameterValue', name: 'category', value: "${env.Category}"],
+									[$class: 'StringParameterValue', name: 'battery', value: "${env.Battery}"],
+									[$class: 'StringParameterValue', name: 'version', value: "${env.Version}"],                        		
+                             		[$class: 'StringParameterValue', name: 'threadCount', value: "${env.VirtualUsers}"],
+                             		[$class: 'StringParameterValue', name: 'GitBranch', value: "${env.GitBranch}"],
+                             		[$class: 'StringParameterValue', name: 'module', value: "${env.Module}"],
+                             		[$class: 'StringParameterValue', name: 'sendEmailTo', value: "testinq@meZocliq.com"]]
+                     		}catch (Exception e) {
+                    			currentBuild.result = 'FAILURE'
+                    		}
+                    	}
+                    }                	
+                }
+                
+                stage("MACHINE -4") {
+                	agent{label "BOT"}
+                     steps {
+                     	script {
+                     		try {                     
+                           		 build job: "cliq-20/PERFORMANCE_TM4JEXECUTOR", wait: true,
+                            		parameters: [[$class: 'StringParameterValue', name: 'Browser', value: "${env.Browser}"],
+                             		[$class: 'StringParameterValue', name: 'AppUrl', value: "${env.AppUrl}"],
+                             		[$class: 'StringParameterValue', name: 'category', value: "${env.Category}"],
+									[$class: 'StringParameterValue', name: 'battery', value: "${env.Battery}"],
+									[$class: 'StringParameterValue', name: 'version', value: "${env.Version}"],                        		
+                             		[$class: 'StringParameterValue', name: 'threadCount', value: "${env.VirtualUsers}"],
+                             		[$class: 'StringParameterValue', name: 'GitBranch', value: "${env.GitBranch}"],
+                             		[$class: 'StringParameterValue', name: 'module', value: "${env.Module}"],
+                             		[$class: 'StringParameterValue', name: 'sendEmailTo', value: "testinq@meZocliq.com"]]
+                     		}catch (Exception e) {
+                    			currentBuild.result = 'FAILURE'
+                    		}
+                    	}
+                    }                	
+                } 
+                                                              
+              }
+           }
+         }
+       }

@@ -1,0 +1,62 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "BUTTON",
+  "testId": "TCCLIQBUTTONREVISE",
+  "testName": "UI_BUTTON_REVISE",
+  "testDescription": "CHECK REVISE BUTTON",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.QL.001",
+        "password": "Judgement Day 01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ADMIN",
+        "process": "USERS"
+      }
+    },
+    {
+      "name": "VZ-FILTER",
+      "context": {
+        "column": [
+          {
+            "title": "PHASE STATE",
+            "text": "ACTIVE"
+          },
+          {
+            "title": "USERNAME",
+            "text": "DEMO.TEST"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "CLICK-BUTTONS",
+      "context": {
+        "zone": "VIEW",
+        "action": "REVISE"
+      }
+    },
+    {
+      "name": "CLICK-BUTTONS",
+      "context": {
+        "zone": "VIEW",
+        "action": "DISCARD"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

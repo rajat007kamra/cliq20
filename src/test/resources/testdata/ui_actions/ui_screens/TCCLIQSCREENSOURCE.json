@@ -1,0 +1,28 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "SCREEN",
+  "testId": "TCCLIQSCREEN001",
+  "testName": "UI_SCREEN_SOURCE",
+  "testDescription": "CHECK SOURCE",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.QL.001",
+        "password": "Judgement Day 01"
+      }
+    },
+    {
+      "name": "DUMMY"
+    },
+    {
+      "name": "LOGOUT"
+    }    
+  ]
+}

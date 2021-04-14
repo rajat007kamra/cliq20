@@ -1,0 +1,138 @@
+{
+  "testType": "CREATE AND CHECK STATUS",
+  "sector": "SE2",
+  "module": "TEMPLATE",
+  "feature": "CREATE TEMPLATE",
+  "group": "TEST TEMPLATE",
+  "testId": "TCCLIQREP002",
+  "testName": "ADD NEW TEMPLATE",
+  "testDescription": "CREATE A NEW TEMPLATE USING TEMPLATE TYPE REPORT WRITER",
+  "testObjectives": "CREATE TEMPLATE AND CHECK STATUS",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "ARUN.KAPOOR",
+        "password": "Monitor@2018",
+        "subtenant": "SE2"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ANALYTICS",
+        "process": "TEMPLATES"
+      }
+    },
+    {
+      "name": "CREATE-NEW-RECORD"
+    },
+    {
+      "name": "ENTER DATA FORM VIEW",
+      "context": {
+        "column": [
+          {
+            "variable": "TEMPLATE TYPE",
+            "value": "EXCEL"
+            
+          },
+          {
+            "variable": "METHOD",
+            "value": "BURST MODE"
+            
+          },
+          {
+            "variable": "EXTENT",
+            "value": "SPLIT BY"            
+          },
+          {
+            "variable": "PROCESS",
+            "value": "VENDOR"            
+          },
+          {
+            "variable": "DELIVERY FORMAT",
+            "value": "EXCEL"            
+          },
+          {
+            "variable": "TEMPLATE NAME",
+            "value": "CHECK TEMPLATE STATUS"            
+          }
+        ]
+      }
+    },
+    {
+      "name": "SAVE"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SAVE",
+        "message": "SAVED!"
+      }
+    },
+    {
+      "name": "VIEW-ATTACHMENTS",
+      "context": {
+        "displayFile": "YES"
+      }
+    },
+    {
+      "name": "DOWNLOAD-ATTACHMENTS",
+      "context": {
+        "filename": [
+          "CHECK TEMPLATE STATUS.XLSX"
+        ]
+      }
+    },
+    {
+      "name": "CLOSE FORM VIEW"
+    },
+    {
+      "name": "REFRESH"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "REFRESH",
+        "message": "REFRESHED!"
+      }
+    },
+    {
+      "name": "FILTER",
+      "context": {
+        "column": [
+          {
+            "title": "TEMPLATE NAME",
+            "text": "CHECK TEMPLATE STATUS"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "SUBMIT"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SUBMIT",
+        "message": "SUBMITTED!"
+      }
+    },
+    {
+      "name": "READ VIEW ZONE",
+      "context": {
+        "column": [
+          {
+            "title": "STATE",
+            "text": "ACTIVE"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

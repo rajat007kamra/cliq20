@@ -1,0 +1,57 @@
+{
+  "testType": "FILE-UPLOAD",
+  "sector": "ADMIN->FEEDS",
+  "module": "FILES",
+  "feature": "UPLOAD ATTACHMENTS",
+  "group": "FILES",
+  "testId": "TCCLIQINTEG046",
+  "testName": "UPLOAD A NEW FILE WITH NON SUPPORTED FORMAT LIKE JPG,PNG,WORD,JPEG",
+  "testDescription": "UPLOAD A NEW FILE WITH NON SUPPORTED FORMAT LIKE JPG,PNG,WORD,JPEG",
+  "testObjectives": "UPLOAD A NEW FILE WITH NON SUPPORTED FORMAT LIKE JPG,PNG,WORD,JPEG",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ADMIN",
+        "process": "FEEDS",
+        "column": [
+          {
+            "title": "STATUS",
+            "text": "COMPLETED"
+          },
+          {
+            "title": "FEED",
+            "text": "UNIVERSAL*"
+          },
+          {
+            "title": "PROCESS",
+            "text": "CLIENT"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "RECORD",
+      "context": {
+        "RowNumber": "1",
+        "Option": "CLONE"
+      }
+    },
+    {
+      "name": "UPLOAD-DOCUMENT",
+      "context": {
+        "path": "testdata/TCCLIQINTEG046.jpg",
+        "name": "TCCLIQINTEG046.jpg",
+        "expected_error": "INVALID FORMAT"
+      }
+    }
+  ]
+}

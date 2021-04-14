@@ -1,0 +1,37 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "testId": "TCCLIQLOGIN018",
+  "testName": "LOGIN_INVALIDCREDENTIALS_UserTriesToLoginInDifferentTabWithSameUser",
+  "testDescription": "LOGIN_INVALIDCREDENTIALS_UserTriesToLoginInDifferentTabWithSameUser",
+  "testObjectives": "Login and Logout",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "AMBER.SINGH",
+        "password": "udhfuihf",
+        "expected_error": "Account Locked for user : AMBER.SINGH"
+        
+      }
+    },
+    {
+    "name":"SWITCH-TAB",
+    "context":{
+        "switchtab":"CHILD"
+       }
+    },
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "AMBER.SINGH",
+        "password": "udhfuihf",
+        "expected_error": "Account Locked for user : AMBER.SINGH"
+      }
+    }
+ ]
+}

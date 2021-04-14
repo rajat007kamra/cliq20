@@ -1,0 +1,22 @@
+{
+  "suites": [
+    {
+      "category": "UI",
+      "battery": "BUTTON",
+	  "suiteName": "UI_BUTTON",
+	  "suiteDescription": "BUTTON ACTIONS GENERIC UI TEST SUITE",
+	  "note": "GENERIC UI BUTTON",
+	  "testCases": [
+	  		"src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONADD.json",
+	  		"src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONAPPROVE.json",
+	  		"src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONDENY.json",
+	  		"src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONDISCARD.json",
+	  		"src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONREVISE.json",
+	  		"src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONSUBMIT.json",
+	  		"src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONWITHDRAW.json",
+	  		"src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONSAVE.json",
+	  		"src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONDELETE.json"
+	  ]
+	}
+	]
+	}

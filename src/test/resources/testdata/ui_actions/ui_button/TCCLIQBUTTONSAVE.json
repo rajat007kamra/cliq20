@@ -1,0 +1,75 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "BUTTON",
+  "testId": "TCCLIQBUTTONSAVE",
+  "testName": "UI_BUTTON_SAVE",
+  "testDescription": "CHECK SAVE BUTTON",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.QL.001",
+        "password": "Judgement Day 01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ADMIN",
+        "process": "USERS"
+      }
+    },
+    {
+      "name": "CLICK-VZBUTTONS",
+      "context": {
+        "action": "ADD"
+      }
+    },
+    {
+      "name": "POPULATE-FORM",
+      "context": {
+        "column": [
+          {
+            "variable": "FIRST",
+            "value": "BOTZ"
+          },
+          {
+            "variable": "LAST",
+            "value": "USER-HASHCODE"
+          },
+          {
+            "variable": "USERNAME",
+            "value": "BOTZ.USER-HASHCODE"
+          },
+          {
+            "variable": "EMAIL",
+            "value": "AUTOMATION.TEST@MEZOCLIQ.COM"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CLICK-BUTTONS",
+      "context": {
+        "zone": "FLY",
+        "action": "SAVE"
+      }
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SAVE",
+        "message": "SAVED!"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

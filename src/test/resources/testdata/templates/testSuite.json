@@ -1,0 +1,8 @@
+{
+  "suiteName": "Templates Test Suite",
+  "suiteDescription": "Templates Test Suite",
+  "note": "Templates test cases",
+  "testCases": [
+    	"src/test/resources/testdata/templates/TCCLIQREP023.json"
+  ]
+}

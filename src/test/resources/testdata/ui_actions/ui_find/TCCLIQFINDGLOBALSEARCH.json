@@ -1,0 +1,31 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "FIND",
+  "testId": "TCCLIQSCREENEXPORTDATA",
+  "testName": "UI_FIND_GLOBALSEARCH",
+  "testDescription": "CHECK GLOBAL SEARCH",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.QL.001",
+        "password": "Judgement Day 01"
+      }
+    },
+    {
+      "name": "GLOBAL-SEARCH",
+      "context": {
+        "text": "ENTITY"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }    
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "WIDGETS",
+  "testId": "TCCLIQWIDGETHORIZONTAL",
+  "testName": "UI_WIDGET_HORIZONTAL",
+  "testDescription": "CHECK HORIZONTAL WIDGET",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.QL.001",
+        "password": "Judgement Day 01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "WIDGETS"
+      }
+    },
+    {
+      "name": "VZ-FILTER",
+      "context": {
+        "column": [
+          {
+            "title": "SIMPLE NAME",
+            "text": "TESTING1"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "OPEN-WIDGET",
+      "context": {
+        "action": "QUICKLIST",
+        "flyout": "LAYOUT"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }    
+  ]
+}

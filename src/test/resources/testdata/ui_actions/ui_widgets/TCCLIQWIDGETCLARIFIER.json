@@ -1,0 +1,51 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "WIDGETS",
+  "testId": "TCCLIQWIDGETCLARIFIER",
+  "testName": "UI_WIDGET_CLARIFIER",
+  "testDescription": "CHECK CLARIFIER WIDGET",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.QL.001",
+        "password": "Judgement Day 01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "APPROVALS"
+      }
+    },
+    {
+      "name": "VZ-FILTER",
+      "context": {
+        "column": [
+          {
+            "title": "PHASE STATUS",
+            "text": "INITIATED"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "OPEN-WIDGET",
+      "context": {
+        "action": "QUICKLIST",
+        "flyout": "APPROVAL CREATION FORM CONFIGURER"
+      }
+    },
+    {
+      "name": "OPEN-CLARIFIER"
+    }  
+  ]
+}

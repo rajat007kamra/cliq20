@@ -1,0 +1,51 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "WIDGETS",
+  "testId": "TCCLIQWIDGETVERTICAL",
+  "testName": "UI_WIDGET_VERTICAL",
+  "testDescription": "CHECK VERTICAL WIDGET",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.QL.001",
+        "password": "Judgement Day 01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "PROCESSES",
+        "process": "TABS"
+      }
+    },
+    {
+      "name": "VZ-FILTER",
+      "context": {
+        "column": [
+          {
+            "title": "MODULE",
+            "text": "EMPLOYEE FINANCIAL ACTIVITIES"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "OPEN-WIDGET",
+      "context": {
+        "action": "QUICKLIST",
+        "flyout": "APPROVERS"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }   
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "testType": "SHARE",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "SHARE EXISTING REPORT",
+  "group": "TEST REPORT",
+  "testId": "TCCLIQREP048",
+  "testName": "SHARE TEMPLATE",
+  "testDescription": "SHARE THE EXISTING ADHOC REPORTS USING FTP",
+  "testObjectives": "SHARE EXISTING REPORT USING FTP",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ANALYTICS",
+        "process": "REPORTS",
+        "column": [
+          {
+            "title": "REPORT",
+            "text": "TESTING JSON TEMPLATE"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "REVISE-RECORD"
+    },
+    {
+      "name": "CLICK-TRIGGER",
+      "context": {
+        "realm": "ANALYTICS",
+        "flexname": "QUICKLIST",
+        "flyoutname": "DESTINATION FTP"
+      }
+    },
+    {
+      "name": "SET DATA IN FLYOUT",
+      "context": {
+        "column": [
+          {
+            "variable": "FTP",
+            "value": "ALFA LAVA"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SUBMIT"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SUBMIT",
+        "message": "SUBMITTED!"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

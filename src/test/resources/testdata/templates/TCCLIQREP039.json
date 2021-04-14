@@ -1,0 +1,99 @@
+{
+  "testType": "CREATE",
+  "sector": "SE2",
+  "module": "TEMPLATE",
+  "feature": "CREATE TEMPLATE",
+  "group": "TEST TEMPLATE",
+  "testId": "TCCLIQREP039",
+  "testName": "CREATE TEMPLATE",
+  "testDescription": "CREATE A QUERY WHICH CAN BE USED IN THE TEMPLATES TO FILTER THE DATA IN THE REPORT",
+  "testObjectives": "CREATE A QUERY WHICH CAN BE USED IN THE TEMPLATES",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "ARUN.KAPOOR",
+        "password": "Monitor@2018",
+        "subtenant": "SE2"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ANALYTICS",
+        "process": "TEMPLATES",
+        "column": [
+          {
+            "title": "TEMPLATE NAME",
+            "text": "VIEW ATTACHMENT RECORD"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "REVISE-RECORD"
+    },
+    {
+      "name": "CLICK-TRIGGER",
+      "context": {
+        "realm": "ANALYTICS",
+        "flexname": "QUICKLIST",
+        "flyoutname": "QUERY PARAMETERS"
+      }
+    },
+    {
+      "name": "SET DATA IN FLYOUT",
+      "context": {
+        "column": [
+          {
+            "title": "NAME",
+            "text": "QUERY 23JULY"
+          },
+          {
+            "title": "DATA FORMAT",
+            "text": "DECIMAL"
+          },
+          {
+            "title": "REQUIRED",
+            "text": "YES"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SUBMIT"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SUBMIT",
+        "message": "SUBMITTED!"
+      }
+    },
+    {
+      "name": "CLOSE FORM VIEW"
+    },
+    {
+    	"name": "READ VIEW ZONE",
+    	"context": {
+        "column": [
+          {
+            "title": "STATE",
+            "expected": "ACTIVE"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VIEW-ATTACHMENTS",
+      "context": {
+        "displayFile": "YES"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

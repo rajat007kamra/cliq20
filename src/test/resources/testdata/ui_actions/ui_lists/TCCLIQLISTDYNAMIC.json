@@ -1,0 +1,28 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "LIST",
+  "testId": "TCCLIQLIST001",
+  "testName": "UI_LIST_DYNAMICLIST",
+  "testDescription": "CHECK DYNAMIC LIST",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.QL.001",
+        "password": "Judgement Day 01"
+      }
+    },
+    {
+      "name": "DUMMY"
+    },
+    {
+      "name": "LOGOUT"
+    }    
+  ]
+}

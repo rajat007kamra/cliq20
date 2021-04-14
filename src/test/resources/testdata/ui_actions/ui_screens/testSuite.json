@@ -1,0 +1,30 @@
+{
+  "suites": [
+    {
+      "category": "UI",
+      "battery": "SCREEN",
+	  "suiteName": "UI_SCREENS",
+	  "suiteDescription": "SCREEN ACTIONS GENERIC UI TEST SUITE",
+	  "note": "GENERIC UI SCREEN",
+	  "testCases": [
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQUISCREENADD.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQUISCREENFORMVIEW.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENTREEVIEW.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENINTEGRATEDVIEW.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQUISCREENADVANCEDFILTER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQUISCREENCOLUMNCHOOSER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENREFRESH.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENEXPORTDATA.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENPASTEROWDATA.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENACCORDION.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENADDFAVORITES.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENCLEARFILTER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENPREFERENCES.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENSOURCE.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQUISCREENPREVIEW.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENVERSIONS.json"
+	  		
+	  ]
+	}
+]
+}

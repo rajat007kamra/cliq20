@@ -1,0 +1,22 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "testId": "TCCLIQLOGIN004",
+  "testName": "LOGIN_INVALIDCREDENTIALS_IncorrectUsernameAndPassword",
+  "testDescription": "LOGIN_INVALIDCREDENTIALS_IncorrectUsernameAndPassword",
+  "testObjectives": "Login and Logout",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+         "user": "SURBHI.SINGHP",
+        "password": "abc",
+        "expected_error": "User not found : SURBHI.SINGHP"
+      }
+    }
+  ]
+}

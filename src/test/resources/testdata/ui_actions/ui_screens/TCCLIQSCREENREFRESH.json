@@ -1,0 +1,38 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "SCREEN",
+  "testId": "TCCLIQSCREENREFRESH",
+  "testName": "UI_SCREEN_REFRESH",
+  "testDescription": "CHECK REFRESH",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.QL.001",
+        "password": "Judgement Day 01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ADMIN",
+        "process": "USERS"
+      }
+    },
+    {
+      "name": "CLICK-VZBUTTONS",
+      "context": {
+        "action": "REFRESH DATA"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }    
+  ]
+}

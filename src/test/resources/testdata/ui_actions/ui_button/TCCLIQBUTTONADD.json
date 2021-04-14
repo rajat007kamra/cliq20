@@ -1,0 +1,38 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "testId": "TCCLIQBUTTONADD",
+  "category": "UI",
+  "battery": "BUTTON",
+  "testName": "UI_BUTTON_ADD",
+  "testDescription": "CHECK RECORD ADD",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.QL.001",
+        "password": "Judgement Day 01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ADMIN",
+        "process": "USERS"
+      }
+    },
+    {
+      "name": "CLICK-VZBUTTONS",
+      "context": {
+        "action": "ADD"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

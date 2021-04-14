@@ -1,0 +1,127 @@
+{
+  "testType": "REPORT CREATION",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "NEW REPORT",
+  "group": "TEST REPORT",
+  "testId": "TCCLIQREPXLSX06",
+  "testName": "REPORTS_EXCEL_ONETIME_XLSX_ZENTITYCHANGE",
+  "testDescription": "REPORTS EXCEL ONETIME XLSX Z ENTITY CHANGE",
+  "testObjectives": "CREATE NEW REPORT",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ANALYTICS",
+        "process": "REPORTS"
+      }
+    },
+    {
+      "name": "CREATE-NEW-RECORD"
+    },
+    {
+      "name": "ENTER DATA FORM VIEW",
+      "context": {
+        "column": [
+          {
+            "variable": "TEMPLATE",
+            "value": "Z-ENTITY CHANGE"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SUBMIT"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SUBMIT",
+        "message": "SUBMITTED!"
+      }
+    },
+    {
+      "name": "CLOSE FORM VIEW"
+    },
+    {
+      "name": "FILTER",
+      "context": {
+        "column": [
+          {
+            "title": "REPORT",
+            "text": "Z-ENTITY CHANGE"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "REFRESH"
+    },
+    {
+      "name": "CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "REFRESH",
+        "message": "REFRESHED!"
+      }
+    },
+    {
+      "name": "REFRESH"
+    },
+    {
+      "name": "CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "REFRESH",
+        "message": "REFRESHED!"
+      }
+    },
+    {
+      "name": "READ VIEW ZONE",
+      "context": {
+        "column": [
+          {
+            "title": "STATUS",
+            "expected": "COMPLETED"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VIEW-ATTACHMENTS",
+      "context": {
+        "displayFile": "YES",
+        "filename": ["Z-ENTITY CHANGE"]
+      }
+    },
+    {
+      "name": "DOWNLOAD-ATTACHMENTS",
+      "context": {
+        "filename": [
+          "Z-ENTITY CHANGE"
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

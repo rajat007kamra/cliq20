@@ -1,0 +1,28 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "WIDGETS",
+  "testId": "TCCLIQWIDGET013",
+  "testName": "UI_WIDGET_VERTICALFLY",
+  "testDescription": "CHECK VERTICALFLY WIDGET",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.QL.001",
+        "password": "Judgement Day 01"
+      }
+    },
+    {
+      "name": "DUMMY"
+    },
+    {
+      "name": "LOGOUT"
+    }    
+  ]
+}

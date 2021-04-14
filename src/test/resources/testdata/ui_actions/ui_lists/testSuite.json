@@ -1,0 +1,16 @@
+{
+  "suites": [
+    {
+      "category": "UI",
+      "battery": "LIST",
+	  "suiteName": "UI_LIST",
+	  "suiteDescription": "LIST ACTIONS GENERIC UI TEST SUITE",
+	  "note": "GENERIC UI LIST",
+	  "testCases": [
+	  		"src/test/resources/testdata/ui_actions/ui_lists/TCCLIQLISTDYNAMIC.json",
+	  		"src/test/resources/testdata/ui_actions/ui_lists/TCCLIQLISTSTATIC.json"
+	  			
+	  ]
+	}
+]
+}

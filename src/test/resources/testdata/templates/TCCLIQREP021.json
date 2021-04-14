@@ -1,0 +1,104 @@
+{
+  "testType": "REVISE",
+  "sector": "SE2",
+  "module": "TEMPLATE",
+  "feature": "REVISE EXISTING TEMPLATE",
+  "group": "TEST TEMPLATE",
+  "testId": "TCCLIQTEMPLATE024",
+  "testName": "ADD NEW TEMPLATE",
+  "testDescription": "REVISE NAME OF A TEMPLATE AND OBSERVE CHANGE IN NAME OF ATTACHMENT",
+  "testObjectives": "REVISE EXISTING TEMPLATE",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "ARUN.KAPOOR",
+        "password": "Monitor@2018",
+        "subtenant": "SE2"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ANALYTICS",
+        "process": "TEMPLATES",
+        "column": [
+          {
+            "title": "STATE",
+            "text": "ACTIVE"
+          },
+          {
+            "title": "TEMPLATE NAME",
+            "text": "REVISE JSON TEMPLATE"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "VIEW-ATTACHMENTS",
+      "context": {
+        "displayFile": "YES"
+      }
+    },
+    {
+      "name": "REVISE-RECORD"
+    },
+    {
+      "name": "FORM VIEW"
+    },
+    {
+      "name": "CHECK-VARIABLE",
+      "context": {
+        "column": [
+          {
+            "variable": "TEMPLATE NAME",
+            "expected": "REVISE JSON TEMPLATE"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ENTER DATA FORM VIEW",
+      "context": {
+        "column": [
+          {
+            "variable": "TEMPLATE NAME",
+            "value": "UPDATED REVISE JSON TEMPLATE"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SUBMIT"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SUBMIT",
+        "message": "SUBMITTED!"
+      }
+    },
+    {
+      "name": "CHECK-VARIABLE",
+      "context": {
+        "column": [
+          {
+            "variable": "TEMPLATE NAME",
+            "expected": "UPDATED REVISE JSON TEMPLATE"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VIEW-ATTACHMENTS",
+      "context": {
+        "displayFile": "YES"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

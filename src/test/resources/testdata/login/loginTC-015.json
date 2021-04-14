@@ -1,0 +1,46 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "testId": "TCCLIQLOGIN015",
+  "testName": "LOGIN_VALIDCREDENTIALS_UserTriesToLoginInDifferentTabWithSameUser",
+  "testDescription": "LOGIN_VALIDCREDENTIALS_UserTriesToLoginInDifferentTabWithSameUser",
+  "testObjectives": "Login and Logout",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.QL.001",
+        "password": "Judgement Day 01"
+      }
+    },
+    {
+    "name":"SWITCH-TAB",
+    "context":{
+        "switchtab":"CHILD"
+       }
+    },
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.QL.001",
+        "password": "Judgement Day 01"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    },
+    {
+    "name":"SWITCH-TAB",
+    "context":{
+        "switchtab":"PARENT"
+       }
+    },
+    {
+      "name": "LOGOUT"
+    }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+  "testType": "LOGIN",
+  "sector": "MEZOCLIQ",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "testId": "TCCLIQLOGIN001",
+  "testName": "LOGIN_VALIDCREDENTIALS_IncorrecttUsername",
+  "testDescription": "LOGIN_VALIDCREDENTIALS_IncorrectUsername",
+  "testObjectives": "Login and Logout",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "MJ",
+        "password":"MezoIndia@001",
+        "expected_error": "User not found : MJ"
+      }
+    }
+  ]
+}

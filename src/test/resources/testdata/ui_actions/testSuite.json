@@ -1,0 +1,93 @@
+{
+  "suites": [
+    {
+      "category": "UI",
+      "battery": "SCREEN",
+	  "suiteName": "UI_SCREENS",
+	  "suiteDescription": "SCREEN ACTIONS GENERIC UI TEST SUITE",
+	  "note": "GENERIC UI SCREEN",
+	  "testCases": [
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQUISCREENADD.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQUISCREENFORMVIEW.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENTREEVIEW.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENINTEGRATEDVIEW.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQUISCREENADVANCEDFILTER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQUISCREENCOLUMNCHOOSER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENREFRESH.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENEXPORTDATA.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENPASTEROWDATA.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENACCORDION.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENADDFAVORITES.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENCLEARFILTER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENPREFERENCES.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENSOURCE.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQSCREENVERSIONS.json",
+	  		"src/test/resources/testdata/ui_actions/ui_screens/TCCLIQUISCREENPREVIEW.json"
+	  ]
+	},{
+	  "category": "UI",
+      "battery": "BUTTON",
+	  "suiteName": "UI_BUTTON",
+	  "suiteDescription": "BUTTON ACTIONS GENERIC UI TEST SUITE",
+	  "note": "GENERIC UI BUTTON",
+	  "testCases": [
+	  		"src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONADD.json",
+	  		"src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONAPPROVE.json",
+	  		"src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONDENY.json",
+	  		"src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONDISCARD.json",
+	  		"src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONREVISE.json",
+	  		"src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONSUBMIT.json",
+	  		"src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONWITHDRAW.json",
+	  		"src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONSAVE.json",
+	  		"src/test/resources/testdata/ui_actions/ui_button/TCCLIQBUTTONDELETE.json"
+	  ]
+	},
+    {
+      "category": "UI",
+      "battery": "FIND",
+	  "suiteName": "UI_FIND",
+	  "suiteDescription": "FIND ACTIONS GENERIC UI TEST SUITE",
+	  "note": "GENERIC UI FIND",
+	  "testCases": [
+	  		"src/test/resources/testdata/ui_actions/ui_find/TCCLIQFINDFILTER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_find/TCCLIQFINDGLOBALSEARCH.json",
+	  		"src/test/resources/testdata/ui_actions/ui_find/TCCLIQFINDSORT.json"	
+	  ]
+	},
+	{
+      "category": "UI",
+      "battery": "LIST",
+	  "suiteName": "UI_LIST",
+	  "suiteDescription": "LIST ACTIONS GENERIC UI TEST SUITE",
+	  "note": "GENERIC UI LIST",
+	  "testCases": [
+	  		"src/test/resources/testdata/ui_actions/ui_lists/TCCLIQLISTDYNAMIC.json",
+	  		"src/test/resources/testdata/ui_actions/ui_lists/TCCLIQLISTSTATIC.json"
+	  			
+	  ]
+	},
+	{
+      "category": "UI",
+      "battery": "WIDGET",
+	  "suiteName": "UI_WIDGET",
+	  "suiteDescription": "WIDGET ACTIONS GENERIC UI TEST SUITE",
+	  "note": "GENERIC UI WIDGET",
+	  "testCases": [
+	  		"src/test/resources/testdata/ui_actions/ui_widgets/TCCLIQWIDGETCHART.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widgets/TCCLIQWIDGETCLARIFIER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widgets/TCCLIQWIDGETDIRECTORY.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widgets/TCCLIQWIDGETEQUATION.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widgets/TCCLIQWIDGETFORM.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widgets/TCCLIQWIDGETHORIZONTAL.json",	
+	  		"src/test/resources/testdata/ui_actions/ui_widgets/TCCLIQWIDGETMAPPER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widgets/TCCLIQWIDGETMATCHER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widgets/TCCLIQWIDGETPLUS.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widgets/TCCLIQWIDGETSCHEDULER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widgets/TCCLIQWIDGETSHARING.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widgets/TCCLIQWIDGETTRANSLATIONS.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widgets/TCCLIQWIDGETVERTICAL.json",
+	  		"src/test/resources/testdata/ui_actions/ui_widgets/TCCLIQWIDGETATTACHMENT.json"
+	  ]
+	}
+  ]
+}

@@ -1,0 +1,92 @@
+pipeline {
+    agent {
+    	label "BOT"
+    }
+    environment {
+    	Browser = "${env.Browser}"
+    	AppUrl = "${env.AppUrl}"
+    	category = "${env.Category}"
+    	subcategory = "${env.Subcategory}"
+    	sendEmailTo = "${env.sendEmailTo}"
+    	version = "${env.Version}"
+    	module = "${env.Module}"
+    	subjectPrefix = "[QE]"
+    	subjectPostFix = "TEST RESULTS"
+
+    }
+    options {
+        skipStagesAfterUnstable()
+    }
+    stages {        
+        stage('Install Driver') {
+            steps {
+            
+             script {
+					if(Browser =="chrome") {
+						    sh """
+								rm -rf /tmp/chromedriver*
+								wget -O /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/84.0.4147.30/chromedriver_linux64.zip && unzip -o /tmp/chromedriver.zip chromedriver -d ${env.WORKSPACE}/driver/linux/;
+               	 			 """
+								}
+
+					}
+            }
+        }        
+         stage('Generate Tests') {
+            steps {
+                sh """
+					mvn clean install exec:java -DskipTests=true -DPurpose="EXECUTE" -DCategory="${category}" -DSubcategory="${subcategory}"                 
+                 """
+            }
+        }
+        stage('Execute Tests') {
+        
+          steps {
+          	script {
+					if(Browser =="chrome") {
+						    sh """
+                				mvn clean install -DsuiteXmlFile=masterTestNg.xml -Dbrowser=${env.Browser} -DappUrl=${env.AppUrl} -Dmode=headless -DbuildNumber=${env.BUILD_NUMBER} -DbuildUrl=${env.BUILD_URL} -DsubjectLine="${subcategory} ${subjectPostFix}"
+               				 """
+								}
+					if(Browser =="safari") {
+					sh """
+                		mvn clean install -DsuiteXmlFile=masterTestNg.xml -Dbrowser=${env.Browser} -DappUrl=${env.AppUrl} -DbuildNumber=${env.BUILD_NUMBER} -DsubjectLine="${subcategory} ${subjectPostFix}"
+                	"""
+					}
+
+				}
+     				 
+ 			 }
+        }        
+    }
+      post {
+        always {
+           junit testResults: '**/target/surefire-reports/*.xml', allowEmptyResults: false
+           script {
+             allure([
+               includeProperties: false,
+               jdk: '',
+               properties: [],
+               reportBuildPolicy: 'ALWAYS',
+               results: [[path: 'target/allure-results']]
+           ])
+           if (fileExists('matrix.csv')) {
+   				emailext attachmentsPattern: 'matrix.csv', body: '''${FILE, path="target/surefire-reports/emailable-report.html"}''',
+        		mimeType: 'text/html',
+        		subject: "${subjectPrefix} ${version} - ${subcategory} ${subjectPostFix}",
+        		to: "${sendEmailTo}",
+        		replyTo: "${sendEmailTo}",
+        		recipientProviders: [[$class: 'CulpritsRecipientProvider']]
+			} else {
+  			    emailext body: '''${FILE, path="target/surefire-reports/emailable-report.html"}''',
+        		mimeType: 'text/html',
+        		subject: "${subjectPrefix} ${version} - ${subcategory} ${subjectPostFix}",
+        		to: "${sendEmailTo}",
+        		replyTo: "${sendEmailTo}",
+        		recipientProviders: [[$class: 'CulpritsRecipientProvider']]
+			}
+
+         }
+     }
+    }
+}

@@ -1,0 +1,55 @@
+{
+  "testType": "VERIFY",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "VERIFY INFORMATION",
+  "group": "TEST REPORTS",
+  "testId": "TCCLIQREP042",
+  "testName": "VERIFY INFORMATION",
+  "testDescription": "CHECK DISPLAY OF INFORMATION AT FORM VIEW OF A GENERATED REPORT WHICH WAS DEFINED IN TEMPLATE",
+  "testObjectives": "DISPLAY OF INFORMATION AT FORM VIEW",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ANALYTICS",
+        "process": "REPORTS",
+        "column": [
+          {
+            "title": "STATUS",
+            "text": "COMPLETED"
+          },
+          {
+            "title": "REPORT",
+            "text": "Z-LOT SUMMARY"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "FORM VIEW"
+    },
+    {
+      "name": "CHECK-VARIABLE",
+      "context": {
+        "column": [
+          {
+            "variable": "TEMPLATE",
+            "expected": "Z-LOT SUMMARY"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

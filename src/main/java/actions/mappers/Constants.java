@@ -1,0 +1,57 @@
+package actions.mappers;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Constants {
+
+	public static Map<String, String> getValue() {
+		Map<String, String> idMap = new HashMap<String, String>();
+		idMap.put("275a9410-a87f-11e7-9fbd-779419bfc667", "ENTITY AFFILIATE");
+		idMap.put("09fcde00-7045-11e6-a77e-8f1364831101", "ENTITIES");
+		idMap.put("ebbcaea0-b528-11e7-8a4a-031842266161", "ENTITY AFFILIATE CONVENTION ROLE");
+		idMap.put("1061c250-b80c-11e7-99a6-0b59a1c2e557", "ENTITY AFFILIATE KINSHIP");
+		idMap.put("2d52f960-b4f1-11e7-bff2-d1fa8ec738c5", "ENTITY AFFILIATE ANCHOR");
+		idMap.put("ea92d820-2e34-11e9-bf78-a53b89447131", "ENTITY AFFILIATE REQUESTED DATE");
+		idMap.put("f88608a0-2bc7-11e8-9cfa-2f91dc978359", "ENTITY AFFILIATE AUTHORIZATION");
+		idMap.put("7df23a10-b5c9-11e7-b134-c5257db54184", "ENTITY AFFILIATE DUTY");
+		idMap.put("960eac10-1db9-11e9-b066-0f03a8b8d37e", "ENTITY AFFILIATE REQUESTOR ");
+		idMap.put("eaf0d1b0-39dc-11e9-8954-492ed9069884", "ENTITY AFFILIATE PROVIDER");
+		idMap.put("2ac75930-a87f-11e7-8a04-ddbba0582c18", "ENTITY AFFILIATE PHASING STATE");
+		idMap.put("40425ae0-81ab-11e6-8fae-a34c4980dc68", "ENTITY EIN");
+		idMap.put("09388690-85d0-11e6-b94b-5f1b37c9d3f1", "PERSON EIN");
+		idMap.put("449bcb90-7516-11e6-9f84-8f1364831101", "PERSON");
+		idMap.put("59cea280-708e-11e6-9d13-5f1b37c9d3f1", "ENTITY DOMICILE COUNTRY");
+		idMap.put("59c63e10-708e-11e6-9d13-5f1b37c9d3f1", "ENTITY DOMICILE STATE ");
+		idMap.put("840b2cc0-7ea4-11e6-8834-5f1b37c9d3f1", "ENTITY TYPE");
+		idMap.put("8c89b930-9c58-11e6-93a4-5f1b37c9d3f1", "ENTITY LEGAL-STRUCTURE^I ");
+		idMap.put("78ca2e70-9c58-11e6-93a4-5f1b37c9d3f1", "ENTITY LEGAL-STRUCTURE^II ");
+		idMap.put("b979e990-94a8-11e6-8f76-5f1b37c9d3f1", "ENTITY ENTITY ID");
+		idMap.put("59c0e6e0-708e-11e6-9d13-5f1b37c9d3f1", "ENTITY NAME LEGAL");
+		idMap.put("59cad1f0-708e-11e6-9d13-5f1b37c9d3f", "ENTITY PHASING STATE");
+		idMap.put("b2a84330-751a-11e6-bc2c-5f1b37c9d3f1", "PERSON CAPTION");
+		idMap.put("b2a472a0-751a-11e6-bc2c-5f1b37c9d3f1", "PERSON PHASING STATE");
+		idMap.put("f88608a0-2bc7-11e8-9cfa-2f91dc978359", "ENTITY AFFILIATE AUTHORIZATION");
+		idMap.put("2ac75930-a87f-11e7-8a04-ddbba0582c18", "ENTITY AFFILIATE PHASING STATE");
+		idMap.put("f88608a0-2bc7-11e8-9cfa-2f91dc978359", "ENTITY AFFILIATE AUTHORIZATION");
+		idMap.put("c3c297f0-4a71-11e8-b64c-779419bfc667", "ENTITY OWNER");
+		idMap.put("6a1568b0-4d3a-11e8-9a93-d1deaa727801", " ENTITY OWNER OWNERSHIP UNITS ORIGINAL");
+		idMap.put("2c4a0e40-4a75-11e8-8525-a1679c7310e7", "ENTITY OWNER PHASING STATE");
+		idMap.put("6a1568b0-4d3a-11e8-9a93-d1deaa727801", " ENTITY OWNER OWNERSHIP UNITS ORIGINAL");
+		idMap.put("0eb1d2c0-97d2-11e6-b239-8f1364831101", "REGISTRATION");
+		idMap.put("91d0eb30-9c7a-11e6-bd0e-5f1b37c9d3f1", "REGISTRATION WITHDRAWAL DATE");
+		idMap.put("58920630-97d2-11e6-b7e9-5f1b37c9d3f1", "REGISTRATION PHASING STATE");
+		idMap.put("91d0eb30-9c7a-11e6-bd0e-5f1b37c9d3f1", "REGISTRATION WITHDRAWAL DATE");
+		idMap.put("350ed7d0-75e3-11e6-a87f-8f1364831101", "INCORPORATION");
+		idMap.put("1fa58e20-addd-11e6-907b-5f1b37c9d3f1", "INCORPORATION ENTITY-TYPE");
+		idMap.put("c198b640-addc-11e6-907b-5f1b37c9d3f1", "INCORPORATION LEGAL-STRUCTURE^II");
+		idMap.put("36ffd261-75e3-11e6-b18c-5f1b37c9d3f1", "INCORPORATION DOMICILE COUNTRY ");
+		idMap.put("36faf060-75e3-11e6-b18c-5f1b37c9d3f1", "INCORPORATION DOMICILE STATE");
+		idMap.put("2e434630-addc-11e6-907b-5f1b37c9d3f1", " INCORPORATION LEGAL-STRUCTURE^I");
+		idMap.put("d52f8490-aac1-11e6-9b0c-5f1b37c9d3f1", "INCORPORATION NAME LEGAL");
+		idMap.put("59cad1f0-708e-11e6-9d13-5f1b37c9d3f1", "ENTITY PHASING STATE");
+
+		return idMap;
+	}
+
+}

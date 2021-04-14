@@ -1,0 +1,47 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "SCREEN",
+  "testId": "TCCLIQSCREEN003",
+  "testName": "UI_SCREEN_CLEARFILTER",
+  "testDescription": "CHECK CLEARFILTER",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.QL.001",
+        "password": "Judgement Day 01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ADMIN",
+        "process": "USERS"
+      }
+    },
+    {
+      "name": "VZ-FILTER",
+      "context": {
+        "column": [
+          {
+            "title": "PHASE STATE",
+            "text": "INACTIVE"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "CLEAR-VZFILTER"
+    },
+    {
+      "name": "LOGOUT"
+    }    
+  ]
+}

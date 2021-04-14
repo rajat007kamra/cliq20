@@ -1,0 +1,73 @@
+{
+  "testType": "SHARE",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "SHARE EXISTING REPORT",
+  "group": "TEST REPORTS",
+  "testId": "TCCLIQREP045",
+  "testName": "SHARE REPORT",
+  "testDescription": "SELECT ADHOC REPORT AND SHARE WITH INTERNAL USERS HAVING DIFFERENT VIEW/EDIT RIGHTS",
+  "testObjectives": "SHARE EXISTING TEMPLATE",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ANALYTICS",
+        "process": "REPORTS",
+        "column": [
+          {
+            "title": "STATUS",
+            "text": "COMPLETED"
+          },
+          {
+            "title": "REPORT",
+            "text": "TESTING JSON TEMPLATE"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "REVISE-RECORD"
+    },
+    {
+      "name": "CLICK-TRIGGER",
+      "context": {
+        "realm": "ANALYTICS",
+        "flexname": "QUICKLIST",
+        "flyoutname": "DISTRIBUTION RULES"
+      }
+    },
+    {
+      "name": "SHARING",
+      "context": {
+      "column": [
+          {
+            "user": "ARUN.KAPOOR",
+        	"rights": "VIEW"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SUBMIT"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SUBMIT",
+        "message": "SUBMITTED!"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

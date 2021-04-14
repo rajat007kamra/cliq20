@@ -1,0 +1,62 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "BUTTON",
+  "testId": "TCCLIQBUTTONDISCARD",
+  "testName": "UI_BUTTON_DISCARD",
+  "testDescription": "CHECK DISCARD BUTTON",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.QL.001",
+        "password": "Judgement Day 01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ADMIN",
+        "process": "USERS"
+      }
+    },
+    {
+      "name": "VZ-FILTER",
+      "context": {
+        "column": [
+          {
+            "title": "PHASE STATE",
+            "text": "ACTIVE"
+          },
+          {
+            "title": "FIRST",
+            "text": "FANG"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "CLICK-BUTTONS",
+      "context": {
+        "zone": "VIEW",
+        "action": "REVISE"
+      }
+    },
+    {
+      "name": "CLICK-BUTTONS",
+      "context": {
+        "zone": "VIEW",
+        "action": "DISCARD"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

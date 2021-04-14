@@ -1,0 +1,53 @@
+pipeline {
+    agent {
+    	label "BOT"
+    }
+    environment {
+    	Browser = "${env.Browser}"
+    	AppUrl = "${env.AppUrl}"
+    }
+    
+    stages {
+       stage('GUI Tests') {
+            failFast true
+            parallel {
+                stage("cliq-20-lem") {
+                    stage ("sync"){
+                        steps {
+                            script {
+                                 try {
+                                   build job: "cliq-20/cliq-20-functionality-specific-legalentitymaster-sync", wait: true,
+                                      parameters: [[$class: 'StringParameterValue', name: 'Category', value: "SPECIFIC"],
+                                     [$class: 'StringParameterValue', name: 'Subcategory', value: "ENTITY MASTER"]]
+                                  }
+                                  catch (Exception e) {
+                                     currentBuild.result = 'FAILURE'
+                                  }
+                               }
+                            }
+                   
+                        }   
+                    stage ("execute"){
+                    	steps {
+                     		script {
+                     		     try {
+                        	       build job: "cliq-20/cliq-20-functionality-specific-legalentitymaster-execute", wait: true,
+                            		  parameters: [[$class: 'StringParameterValue', name: 'Category', value: "SPECIFIC"],
+                             		 [$class: 'StringParameterValue', name: 'Subcategory', value: "ENTITY MASTER"],                        		
+                             		 [$class: 'StringParameterValue', name: 'Browser', value: "${env.Browser}"],
+                                     [$class: 'StringParameterValue', name: 'AppUrl', value: "${env.AppUrl}"],
+                             		 [$class: 'StringParameterValue', name: 'sendEmailTo', value: "testinq@mezocliq.com"]]
+                    		      }
+                                  catch (Exception e) {
+                    			     currentBuild.result = 'FAILURE'
+                    		      }
+                    	       }
+                            }
+                   
+                    }
+                }             	
+            }
+                                                              
+        }
+    }
+}

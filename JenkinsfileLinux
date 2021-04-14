@@ -1,0 +1,83 @@
+pipeline {
+    agent {
+    	label "BOT"
+    }
+    environment {
+    	Browser = "${env.Browser}"
+    	AppUrl = "${env.AppUrl}"
+    	DirLocation = "${env.DirLocation}"
+    	TestSuite = "${env.TestSuite}"
+    	sendEmailTo = "${env.sendEmailTo}"
+    	version = "${env.Version}"
+    	module = "${env.Module}"
+    	subjectPrefix = "[QE]"
+    	subjectPostFix = "TEST RESULTS"
+    	threadCount = "1"
+
+    }
+    options {
+        skipStagesAfterUnstable()
+    }
+    stages {
+        stage('Build') {
+            steps {
+               sh """
+              		 mvn clean install -DskipTests=true
+               	  """
+            }
+        }
+        
+        stage('Install chromedriver') {
+            steps {
+               sh """
+					rm -rf /tmp/chromedriver*
+					wget -O /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/84.0.4147.30/chromedriver_linux64.zip && unzip -o /tmp/chromedriver.zip chromedriver -d ${env.WORKSPACE}/driver/linux/;
+               	  """
+            }
+        }        
+         stage('Generate Tests') {
+            steps {
+                sh """
+					mvn clean install exec:java -DskipTests=true -DdirLocation=${env.DirLocation} -DtestSuite=${env.TestSuite} -DthreadCount=${env.threadCount}                
+                 """
+            }
+        }
+        stage('Execute Tests') {
+        
+          steps {
+          
+          	script { 
+          			def AppUrl_new = AppUrl.split(",")
+          			for (i in AppUrl_new){
+          			try {
+       			sh """
+                	mvn clean install -DsuiteXmlFile=masterTestNg.xml -Dbrowser=${env.Browser} -DappUrl=${i} -Dmode=headless -DbuildNumber=${env.BUILD_NUMBER} -DbuildUrl=${env.BUILD_URL} -DsubjectLine="${module} ${subjectPostFix}"
+                """ }
+                catch (err) {
+                continue }
+     				} 
+       			 }
+ 			 }
+        }        
+    }
+     post {
+        always {
+           junit testResults: '**/target/surefire-reports/*.xml', allowEmptyResults: false
+           script {
+             allure([
+               includeProperties: false,
+               jdk: '',
+               properties: [],
+               reportBuildPolicy: 'ALWAYS',
+               results: [[path: 'target/allure-results']]
+           ])
+    		emailext body: '''${FILE, path="target/surefire-reports/emailable-report.html"}''',
+        		mimeType: 'text/html',
+        		subject: "${subjectPrefix} ${version} - ${module} ${subjectPostFix}",
+        		to: "${sendEmailTo}",
+        		replyTo: "${sendEmailTo}",
+        		recipientProviders: [[$class: 'CulpritsRecipientProvider']]
+         }
+     }
+    }
+}

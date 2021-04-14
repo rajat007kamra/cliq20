@@ -1,0 +1,17 @@
+environment:
+- url: https://qabin-c-test.mezocliq.com/ql
+  userData:
+          - username: BOTZ.QL.001
+            password: Judgement Day 01
+            subtenant: ZZZ1
+          - username: LEM.IND.USER.01
+            password: YYYY2
+            subtenant: ZZZZ2
+- url: https://qanon-b.mezocliq.com/mezocliq/looqs.html
+  userData:
+          - username: Qanon.LOGIN.IND.USER.001
+            password: AAA
+            subtenant: BBB
+          - username: Qanon.UI.IND.USER.001
+            password: CCC
+            subtenant: DDD

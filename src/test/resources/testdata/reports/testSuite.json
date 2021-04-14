@@ -1,0 +1,32 @@
+{
+  "suiteName": "REPORTS Test Suite",
+  "suiteDescription": "REPORTS Test Suite",
+  "note": "REPORTS test cases",
+  "testCases": [
+    	"src/test/resources/testdata/reports/TCCLIQREPXLSX01.json",
+    	"src/test/resources/testdata/reports/TCCLIQREPXLSX02.json",
+    	"src/test/resources/testdata/reports/TCCLIQREPXLSX03.json",
+    	"src/test/resources/testdata/reports/TCCLIQREPXLSX04.json",
+    	"src/test/resources/testdata/reports/TCCLIQREPXLSX05.json",
+    	"src/test/resources/testdata/reports/TCCLIQREPXLSX06.json",
+    	"src/test/resources/testdata/reports/TCCLIQREPXLSX07.json",
+    	"src/test/resources/testdata/reports/TCCLIQREPXLSX08.json",    	
+    	"src/test/resources/testdata/reports/TCCLIQREPSCH01.json",
+    	"src/test/resources/testdata/reports/TCCLIQREPSCH02.json",
+    	"src/test/resources/testdata/reports/TCCLIQREPSCH03.json",
+    	"src/test/resources/testdata/reports/TCCLIQREPSCH04.json",
+    	"src/test/resources/testdata/reports/TCCLIQREPSCH05.json",
+    	"src/test/resources/testdata/reports/TCCLIQREPSCH06.json",
+    	"src/test/resources/testdata/reports/TCCLIQREPSCH07.json",
+    	"src/test/resources/testdata/reports/TCCLIQREPSCH08.json",    	
+    	"src/test/resources/testdata/reports/TCCLIQREP040.json",
+    	"src/test/resources/testdata/reports/TCCLIQREP041.json",
+    	"src/test/resources/testdata/reports/TCCLIQREP042.json",
+    	"src/test/resources/testdata/reports/TCCLIQREP043.json",
+    	"src/test/resources/testdata/reports/TCCLIQREP044.json",
+    	"src/test/resources/testdata/reports/TCCLIQREP045.json",
+    	"src/test/resources/testdata/reports/TCCLIQREP046.json",
+    	"src/test/resources/testdata/reports/TCCLIQREP047.json",
+    	"src/test/resources/testdata/reports/TCCLIQREP048.json"
+  ]
+}

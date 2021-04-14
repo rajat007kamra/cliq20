@@ -1,0 +1,54 @@
+{
+  "testType": "VERIFY",
+  "sector": "SE2",
+  "module": "TEMPLATE",
+  "feature": "VERFIY EMAIL COUNT",
+  "group": "TEST TEMPLATE",
+  "testId": "TCCLIQREP012",
+  "testName": "EMAIL COUNT",
+  "testDescription": "MAKE SURE TO HAVE THE EMAIL COUNTS FOR ALL THE TEMPLATES",
+  "testObjectives": "FIND EMAIL COUNT OF TEMPLATE",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "ARUN.KAPOOR",
+        "password": "Monitor@2018",
+        "subtenant": "SE2"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ANALYTICS",
+        "process": "TEMPLATES",
+        "column": [
+          {
+            "title": "STATE",
+            "text": "ACTIVE"
+          },
+          {
+            "title": "TEMPLATE NAME",
+            "text": "TEST-051119-1"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "READ VIEW ZONE",
+      "context": {
+        "column": [
+          {
+            "title": "EMAIL COUNT",
+            "expected": "2"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

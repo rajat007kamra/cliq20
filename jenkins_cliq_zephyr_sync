@@ -1,0 +1,21 @@
+pipeline {
+    agent {
+    	label "BOT"
+    }
+    environment {
+    	category = "${env.Category}"
+    	subcategory = "${env.Subcategory}"
+    }
+    options {
+        skipStagesAfterUnstable()
+    }
+    stages {             
+         stage('Update TM4J') {
+            steps {
+                sh """
+					mvn clean install exec:java -DskipTests=true -DPurpose="SYNC" -DCategory="${category}" -DSubcategory="${subcategory}" -DCONFIGFILE=conf/settings.yaml 	
+				"""
+            }
+        }       
+    }
+}

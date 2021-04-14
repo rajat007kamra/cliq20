@@ -1,0 +1,38 @@
+{
+  "testType": "VERIFY",
+  "sector": "MEZOCLIQ",
+  "module": "APPLICATION",
+  "feature": "SMOKE",
+  "group": "TEST",
+  "category": "UI",
+  "battery": "SCREEN",
+  "testId": "TCCLIQSCREENINTEGRATEDVIEW",
+  "testName": "UI_SCREEN_INTEGRATEDVIEW",
+  "testDescription": "CHECK INTEGRATED VIEW",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.QL.001",
+        "password": "Judgement Day 01"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ADMIN",
+        "process": "USERS"
+      }
+    },
+    {
+      "name": "CLICK-VZBUTTONS",
+      "context": {
+        "action": "INTEGRATED VIEW"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

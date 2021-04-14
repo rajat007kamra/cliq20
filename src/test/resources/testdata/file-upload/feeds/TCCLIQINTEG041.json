@@ -1,0 +1,56 @@
+{
+  "testType": "FILE-UPLOAD",
+  "sector": "ADMIN->FEEDS",
+  "module": "FILES",
+  "feature": "UPLOAD ATTACHMENTS",
+  "group": "FILES",
+  "testId": "TCCLIQINTEG041",
+  "testName": "UPLOAD A BLANK TEMPLATE",
+  "testDescription": "UPLOAD A BLANK TEMPLATE",
+  "testObjectives": "UPLOAD A BLANK TEMPLATE",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ADMIN",
+        "process": "FEEDS",
+        "column": [
+          {
+            "title": "STATUS",
+            "text": "COMPLETED"
+          },
+          {
+            "title": "FEED",
+            "text": "UNIVERSAL"
+          },
+          {
+            "title": "PROCESS",
+            "text": "CLIENT"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "RECORD",
+      "context": {
+        "RowNumber": "1",
+        "Option": "CLONE"
+      }
+    },
+    {
+      "name": "UPLOAD-DOCUMENT",
+      "context": {
+        "path": "testdata/TCCLIQINTEG041.csv",
+        "name": "TCCLIQINTEG041.csv"
+      }
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "testType": "CREATE",
+  "sector": "SE2",
+  "module": "TEMPLATE",
+  "feature": "NEW TEMPLATE",
+  "group": "TEST TEMPLATE",
+  "testId": "TCCLIQREP003",
+  "testName": "ADD NEW TEMPLATE",
+  "testDescription": "CREATE TEMPALTES USING BURST MODE OR SPLIT BY METHODS",
+  "testObjectives": "CREATE NEW TEMPLATE",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "ARUN.KAPOOR",
+        "password": "Monitor@2018",
+        "subtenant": "SE2"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ANALYTICS",
+        "process": "TEMPLATES"
+      }
+    },
+    {
+      "name": "CREATE-NEW-RECORD"
+    },
+    {
+      "name": "ENTER DATA FORM VIEW",
+      "context": {
+        "column": [
+          {
+            "variable": "TEMPLATE TYPE",
+            "value": "EXCEL"
+          },
+          {
+            "variable": "METHOD",
+            "value": "BURST MODE"
+          },
+          {
+            "variable": "EXTENT",
+            "value": "SPLIT BY"
+          },
+          {
+            "variable": "PROCESS",
+            "value": "VENDOR"
+          },
+          {
+            "variable": "DELIVERY FORMAT",
+            "value": "CSV & EXCEL"
+          },
+          {
+            "variable": "TEMPLATE NAME",
+            "value": "DOWNLOAD FILE"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SAVE"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SAVE",
+        "message": "SAVED!"
+      }
+    },
+    {
+      "name": "VIEW-ATTACHMENTS",
+      "context": {
+        "displayFile": "YES"
+      }
+    },
+    {
+      "name": "DOWNLOAD-ATTACHMENTS",
+      "context": {
+         "filename": [
+         "DOWNLOAD FILE.XLSX",
+         "ATTACHED FILE.XLSX"
+         ]
+      }
+    },
+    {
+      "name": "CLOSE FORM VIEW"
+    },
+    {
+      "name": "SUBMIT"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SUBMIT",
+        "message": "SUBMITTED!"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "testType": "FILE-UPLOAD",
+  "sector": "ADMIN->FEEDS",
+  "module": "FILES",
+  "feature": "UPLOAD ATTACHMENTS",
+  "group": "FILES",
+  "testId": "TCCLIQINTEG045",
+  "testName": "UPLOAD A NEW FILE WITH INVALID ENTITY MEANS, ENTITY WHICH IS NOT LISTED IN OUR SYSTEM DATABASE.",
+  "testDescription": "UPLOAD A NEW FILE WITH INVALID ENTITY MEANS, ENTITY WHICH IS NOT LISTED IN OUR SYSTEM DATABASE.",
+  "testObjectives": "UPLOAD A NEW FILE WITH INVALID ENTITY MEANS, ENTITY WHICH IS NOT LISTED IN OUR SYSTEM DATABASE.",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ADMIN",
+        "process": "FEEDS",
+        "column": [
+          {
+            "title": "STATUS",
+            "text": "COMPLETED"
+          },
+          {
+            "title": "FEED",
+            "text": "ODS*"
+          },
+          {
+            "title": "PROCESS",
+            "text": "TEAM"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "RECORD",
+      "context": {
+        "RowNumber": "1",
+        "Option": "CLONE"
+      }
+    },
+    {
+      "name": "UPLOAD-DOCUMENT",
+      "context": {
+        "path": "testdata/TCCLIQINTEG045.csv",
+        "name": "TCCLIQINTEG045.csv"
+      }
+    }
+  ]
+}

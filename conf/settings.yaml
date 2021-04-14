@@ -1,0 +1,55 @@
+canonical_api_service:                                                                                                                                                                                                                     
+      connection:                                                                                                                                                                                                                          
+           qryptz_service: 172.17.0.19:7911                                                                                                                                                        
+           drops_service: 172.17.0.21:7961
+           rule_service: 172.17.0.21:7971                                                                                                                                                               
+           indexer_service: 172.17.0.21:7991
+           endpoint:
+           report_service: 172.17.0.17:7951                                                                                                                                                                                                                       
+      parameters:                                                                                                                                                                                                                          
+           session_timeout: 30000
+           qryptz_session_timeout: 15000
+           drops_session_timeout: 10000
+           qryptz_hb_timeout: 1000
+           drops_hb_timeout: 1000
+           max_total: 1000                                                                                                                                                                                                                 
+           max_active: 1000                                                                                                                                                                                                                
+           max_idle: 40                                                                                                                                                                                                                    
+           max_wait: 10000
+           connection_strategy: OVERLOAD_IF_FULL
+           enable_computed_variable_cache: true
+qopz_api_service:                                                                                                                                                                                                                          
+     connection:                                                                                                                                                                                                                           
+           es_srv_host: _app._tcp.qopz-elasticsearch-qabinB.qozm.mezocliq.info                                                                                                                                                             
+           clustername: qopz-a                                                                                                                                                                                                              
+           workflow_service: _app._tcp.qopz-flux-qabinB.qozm.mezocliq.info      
+document_store:                                                                                                                                                                                                                            
+     connection:                                                                                                                                                                                                                           
+          endpoint: "qontent-object.qozm.mezocliq.info"                                                                                                                                                                                    
+          user_name: "qabin20150610"                                                                                    
+          access_key: "LB0CX128BCEB71MPJK1Y"                                                                            
+          secret_key: "h2CpSzULhti1NrfGNejPJzKJlH0lAZf54AdFs1kd"                                                                                                                                                                          
+     parameters:                                                                                                                                                                                                                           
+          session_timeout: 10000                                                                                                                                                                                                           
+          temp_directory: /run/xstor/Xtnd/data/bytes/wildfly                                                                                                                                                                               
+                                                                                                                                                                                                                                           
+services:                                                                                                                                                                                                                                  
+    - class_name: com.mezocliq.qavez.helpers.listeners.KafkaGenericlistener                                                                                                                                                                
+      parameters:                                                                                                                                                                                                                          
+        topic_server: 172.17.0.19:9092                                                                                                                                                                                                     
+        topic_name: REPLICATION                                                                                                                                                                                                            
+        topic_groupname : zonez-a                                                                                                                                                                                                          
+        threads: 1                                                                                                                                                                                                                         
+        internal_queue_capacity : 5                                                                                                                                                                                                        
+        initial_delay : false                                                                                                                                                                                                              
+        enabled: true                                                                                                                                                                                                                      
+                                                                                                                                                                                                                                           
+    - class_name: com.mezocliq.qavez.helpers.listeners.KafkaFileloadapprovalListenerMDB                                                                                                                                                      
+      parameters:                                                                                                                                                                                                                          
+        topic_server: 172.17.0.19:9092                                                                                                                                                                                                     
+        topic_name: REPLICATION                                                                                                                                                                                                            
+        topic_groupname : fileloadapproval                                                                                                                                                                                                 
+        threads: 30                                                                                                                                                                                                                         
+        internal_queue_capacity : 5                                                                                                                                                                                                        
+        initial_delay : false                                                                                                                                                                                                              
+        enabled: true

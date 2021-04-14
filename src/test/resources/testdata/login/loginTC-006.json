@@ -1,0 +1,20 @@
+{
+  "testType": "LOGIN",
+  "sector": "",
+  "module": "LOGIN",
+  "feature": "FORGOT PASSWORD",
+  "group": "TEST REPORT",
+  "testId": "TCCLIQLOGIN006",
+  "testName": "LOGIN_FORGOTPASSWORD_EnteringWrongSecurityAnswer",
+  "testDescription": "LOGIN_FORGOTPASSWORD_EnteringWrongSecurityAnswer",
+  "testObjectives": "FORGOT PASSWORD FUNCTIONALITY",
+  "note": "",
+  "actions": [
+    {
+      "name": "FORGOT-PASSWORD",
+      "context": {
+        "username": "AMBER.SINGH",
+        "securityanswer": "PUPPET"      }
+    }
+  ]
+}

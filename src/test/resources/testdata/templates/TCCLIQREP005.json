@@ -1,0 +1,109 @@
+{
+  "testType": "CREATE",
+  "sector": "ASSET MANAGEMENT",
+  "module": "TEMPLATE",
+  "feature": "NEW TEMPLATE",
+  "group": "TEST TEMPLATE",
+  "testId": "TCCLIQREP005",
+  "testName": "ADD NEW TEMPLATE",
+  "testDescription": "CREATE A NEW TEMPLATE WITH THE NAME OF AN EXISTING TEMPLATE IN OTHER SUBTENANT",
+  "testObjectives": "CREATE NEW TEMPLATE",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "ARUN.KAPOOR",
+        "password": "Monitor@2018",
+        "subtenant": "ASSET MANAGEMENT"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ANALYTICS",
+        "process": "TEMPLATES"
+      }
+    },
+    {
+      "name": "CREATE-NEW-RECORD"
+    },
+    {
+      "name": "ENTER DATA FORM VIEW",
+      "context": {
+        "column": [
+          {
+            "variable": "TEMPLATE TYPE",
+            "value": "EXCEL"
+          },
+          {
+            "variable": "METHOD",
+            "value": "BURST MODE"
+          },
+          {
+            "variable": "EXTENT",
+            "value": "SPLIT BY"
+          },
+          {
+            "variable": "PROCESS",
+            "value": "VENDOR"
+          },
+          {
+            "variable": "DELIVERY FORMAT",
+            "value": "CSV & EXCEL"
+          },
+          {
+            "variable": "TEMPLATE NAME",
+            "value": "DOWNLOAD FILE"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SAVE"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+      	"action": "SAVE",
+        "message": "SAVED!"
+      }      
+    },
+    {
+      "name": "VIEW-ATTACHMENTS",
+      "context": {
+        "column": [
+          {
+            "displayFile": "YES"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DOWNLOAD-ATTACHMENTS",
+      "context": {
+        "column": [
+          {
+            "file": "DOWNLOAD FILE.XLSX"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CLOSE FORM VIEW"
+    },
+    {
+      "name": "SUBMIT"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+      	"action": "SUBMIT",
+        "message": "SUBMITTED!"
+      }      
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

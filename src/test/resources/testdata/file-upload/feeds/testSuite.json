@@ -1,0 +1,8 @@
+{
+  "suiteName": "FEEDS File Upload Test Suite",
+  "suiteDescription": "FEEDS File Upload Test Suite",
+  "note": "FEEDS test cases",
+  "testCases": [
+    	"src/test/resources/testdata/file-upload/feeds/TCCLIQINTEG046.json"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "testId": "TCCLIQLOGIN013",
+  "testName": "LOGIN_INVALIDCREDENTIALS_HavingSpecialChracterInUsername",
+  "testDescription": "LOGIN_INVALIDCREDENTIALS_HavingSpecialChracterInUsername",
+  "testObjectives": "Login and Logout",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "surbhi.!2",
+        "password":"MezoIndia@001",
+        "expected_error":"User not found : SURBHI.!2"
+      }
+    }
+ ]
+}

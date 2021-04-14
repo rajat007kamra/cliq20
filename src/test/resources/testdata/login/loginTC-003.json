@@ -1,0 +1,22 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "testId": "TCCLIQLOGIN003",
+  "testName": "LOGIN_INVALIDCREDENTIALS_WhenPasswordIsIncorrect",
+  "testDescription": "LOGIN_INVALIDCREDENTIALS_WhenPasswordIsIncorrect",
+  "testObjectives": "Login and Logout",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "AMBER.SINGH",
+        "password": "udhfuihf",
+        "expected_error": "Account Locked for user : AMBER.SINGH"
+     }
+    }
+  ]
+}

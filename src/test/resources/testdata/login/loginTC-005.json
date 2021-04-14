@@ -1,0 +1,22 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "testId": "TCCLIQLOGIN005",
+  "testName": "LOGIN_INVALIDCREDENTIALS_WithoutEnteringUserameAndPassword",
+  "testDescription": "LOGIN_INVALIDCREDENTIALS_WithoutEnteringUserameAndPassword",
+  "testObjectives": "LOGIN/LOGOUT",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "",
+        "password": "",
+        "expected_error": "Please enter username"
+      }
+    }
+  ]
+}

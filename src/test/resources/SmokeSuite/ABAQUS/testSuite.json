@@ -1,0 +1,14 @@
+{
+  "suites": [
+  {
+      "category": "SMOKE",
+      "battery": "AVAILABILITY",
+      "suiteName": "AVAILABILITY TESTS",
+      "suiteDescription": "AVAILABILITY TESTS",
+      "note": "AVAILABLITY TESTS",
+      "testCases": [
+	        "src/test/resources/SmokeSuite/ABAQUS/SM_loginTC-001.json"
+      ]
+    }
+  ]
+}

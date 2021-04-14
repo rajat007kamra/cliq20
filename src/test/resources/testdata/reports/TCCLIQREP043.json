@@ -1,0 +1,52 @@
+{
+  "testType": "VERIFY",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "VERIFY EMAIL COUNT",
+  "group": "TEST REPORTS",
+  "testId": "TCCLIQREP043",
+  "testName": "EMAIL COUNT",
+  "testDescription": "CHECK THE DISPLAY OF EMAIL COUNTS FOR SCHEDULED REPORTS AT VIEW ZONE",
+  "testObjectives": "FIND EMAIL COUNT OF REPORT",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ANALYTICS",
+        "process": "REPORTS",
+        "column": [
+          {
+            "title": "STATUS",
+            "text": "COMPLETED"
+          },
+          {
+            "title": "REPORT",
+            "text": "TESTING JSON TEMPLATE"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "READ VIEW ZONE",
+      "context": {
+        "column": [
+          {
+            "title": "EMAIL COUNT",
+            "expected": "---"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

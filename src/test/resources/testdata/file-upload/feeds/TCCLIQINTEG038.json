@@ -1,0 +1,56 @@
+{
+  "testType": "FILE-UPLOAD",
+  "sector": "ADMIN->FEEDS",
+  "module": "FILES",
+  "feature": "UPLOAD ATTACHMENTS",
+  "group": "FILES",
+  "testId": "TCCLIQINTEG038",
+  "testName": "UPLOAD A NEW FILE",
+  "testDescription": "UPLOAD A NEW FILE",
+  "testObjectives": "UPLOAD A NEW FILE",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ADMIN",
+        "process": "FEEDS",
+        "column": [
+          {
+            "title": "STATUS",
+            "text": "COMPLETED"
+          },
+          {
+            "title": "FEED",
+            "text": "UNIVERSAL*"
+          },
+          {
+            "title": "PROCESS",
+            "text": "CLIENT*"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "RECORD",
+      "context": {
+        "RowNumber": "1",
+        "Option": "CLONE"
+      }
+    },
+    {
+      "name": "UPLOAD-DOCUMENT",
+      "context": {
+        "path": "testdata/TCCLIQINTEG038.csv",
+        "name": "TCCLIQINTEG038.csv"
+      }
+    }
+  ]
+}

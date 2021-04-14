@@ -1,0 +1,86 @@
+{
+  "testType": "SHARE",
+  "sector": "SE2",
+  "module": "TEMPLATE",
+  "feature": "SHARE EXISTING TEMPLATE",
+  "group": "TEST TEMPLATE",
+  "testId": "TCCLIQREP016",
+  "testName": "SHARE TEMPLATE",
+  "testDescription": "SHARE THE TEMPLATE WITH ANOTHER USER",
+  "testObjectives": "SHARE EXISTING TEMPLATE",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "ARUN.KAPOOR",
+        "password": "Monitor@2018",
+        "subtenant": "SE2"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ANALYTICS",
+        "process": "TEMPLATES",
+        "column": [
+          {
+            "title": "STATE",
+            "text": "ACTIVE"
+          },
+          {
+            "title": "TEMPLATE NAME",
+            "text": "TESTING TEMP1"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "REVISE-RECORD"
+    },
+    {
+      "name": "CLICK-TRIGGER",
+      "context": {
+        "realm": "ANALYTICS",
+        "flexname": "WORKFLOW",
+        "flyoutname": "SHARING"
+      }
+    },
+    {
+      "name": "SHARING",
+      "context": {
+      "column": [
+          {
+            "user": "RAJAT.KAMRA",
+        	"rights": "VIEW"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SUBMIT"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SUBMIT",
+        "message": "SUBMITTED!"
+      }
+    },
+    {
+      "name": "READ VIEW ZONE",
+      "context": {
+        "column": [
+          {
+            "title": "STATE",
+            "expected": "ACTIVE"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

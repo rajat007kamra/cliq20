@@ -1,0 +1,76 @@
+{
+  "testType": "DUPLICATE",
+  "sector": "SE2",
+  "module": "TEMPLATE",
+  "feature": "EXISTING TEMPLATE",
+  "group": "TEST TEMPLATE",
+  "testId": "TCCLIQREP004",
+  "testName": "CREATE DUPLICATE TEMPLATE",
+  "testDescription": "NEW TEMPLATE WITH THE NAME OF AN EXISTING TEMPLATE IN SAME SUBTENANT",
+  "testObjectives": "CREATE DUPLICATE TEMPLATE",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "ARUN.KAPOOR",
+        "password": "Monitor@2018",
+        "subtenant": "SE2"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ANALYTICS",
+        "process": "TEMPLATES"
+      }
+    },
+    {
+      "name": "CREATE-NEW-RECORD"
+    },
+    {
+      "name": "ENTER DATA FORM VIEW",
+      "context": {
+        "column": [
+          {
+            "variable": "TEMPLATE TYPE",
+            "value": "EXCEL"
+          },
+          {
+            "variable": "METHOD",
+            "value": "BURST MODE"
+          },
+          {
+            "variable": "EXTENT",
+            "value": "SPLIT BY"
+          },
+          {
+            "variable": "PROCESS",
+            "value": "VENDOR"
+          },
+          {
+            "variable": "DELIVERY FORMAT",
+            "value": "CSV & EXCEL"
+          },
+          {
+            "variable": "TEMPLATE NAME",
+            "value": "DOWNLOAD FILE"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SAVE"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+      	"action": "DUPLICATE",
+        "message": "DUPLICATE RECORD"
+      }      
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

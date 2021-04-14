@@ -1,0 +1,153 @@
+{
+  "testType": "REVISE",
+  "sector": "MEZOCLIQ",
+  "module": "REPORTS",
+  "feature": "REVISE ADHOC REPORT",
+  "group": "TEST REPORT",
+  "testId": "TCCLIQREP041",
+  "testName": "REVISE REPORT",
+  "testDescription": "REVISE THE NAME OF THE EXISTING ADHOC REPORT",
+  "testObjectives": "REVISE EXISTING ADHOC REPORT",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ANALYTICS",
+        "process": "REPORTS",
+        "column": [
+          {
+            "title": "STATUS",
+            "text": "COMPLETED"
+          },
+          {
+            "title": "REPORT",
+            "text": "TEMPLATE TEST 03282020"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "VIEW-ATTACHMENTS",
+      "context": {
+        "displayFile": "YES",
+        "filename": ["TEMPLATE TEST"]
+      }
+    },
+    {
+      "name": "REVISE-RECORD"
+    },
+    {
+      "name": "FORM VIEW"
+    },
+    {
+      "name": "ENTER DATA FORM VIEW",
+      "context": {
+        "column": [
+          {
+            "variable": "TEMPLATE",
+            "value": "TEMPLATE TEST 05102020"
+          }
+        ]
+      }
+    },{
+      "name": "SAVE"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SAVE",
+        "message": "SAVED!"
+      }
+    },
+    {
+      "name": "CLOSE FORM VIEW"
+    },
+    {
+      "name": "FILTER",
+      "context": {
+        "column": [
+          {
+            "title": "REPORT",
+            "text": "TEMPLATE TEST 05102020"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "READ VIEW ZONE",
+      "context": {
+        "column": [
+          {
+            "title": "STATUS",
+            "expected": "PENDING"
+          }
+        ]
+      }
+    },
+    {
+      "name": "REFRESH"
+    },
+    {
+      "name": "CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "REFRESH",
+        "message": "REFRESHED!"
+      }
+    },
+    {
+      "name": "SUBMIT"
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "SUBMIT",
+        "message": "SUBMITTED!"
+      }
+    },
+    {
+      "name": "REFRESH"
+    },
+    {
+      "name": "CONFIRMATION",
+      "context": {
+        "option": "YES"
+      }
+    },
+    {
+      "name": "CHECK-MESSAGE",
+      "context": {
+        "action": "REFRESH",
+        "message": "REFRESHED!"
+      }
+    },
+    {
+      "name": "READ VIEW ZONE",
+      "context": {
+        "column": [
+          {
+            "title": "STATUS",
+            "expected": "COMPLETED"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

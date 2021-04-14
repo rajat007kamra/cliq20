@@ -1,0 +1,56 @@
+{
+  "testType": "FILE-UPLOAD",
+  "sector": "ADMIN->FEEDS",
+  "module": "FILES",
+  "feature": "UPLOAD ATTACHMENTS",
+  "group": "FILES",
+  "testId": "TCCLIQINTEG043",
+  "testName": "UPLOAD A NEW FILE WITH SUBTENANT ABC",
+  "testDescription": "UPLOAD A NEW FILE WITH SUBTENANT AS 123",
+  "testObjectives": "UPLOAD A NEW FILE WITH SUBTENANT AS 123",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.001"
+      }
+    },
+    {
+      "name": "NAVIGATE-SCREEN",
+      "context": {
+        "realm": "ADMIN",
+        "process": "FEEDS",
+        "column": [
+          {
+            "title": "STATUS",
+            "text": "COMPLETED"
+          },
+          {
+            "title": "FEED",
+            "text": "HR"
+          },
+          {
+            "title": "PROCESS",
+            "text": "TEAM"
+          }
+        ],
+        "selectRow": "1"
+      }
+    },
+    {
+      "name": "RECORD",
+      "context": {
+        "RowNumber": "1",
+        "Option": "CLONE"
+      }
+    },
+    {
+      "name": "UPLOAD-DOCUMENT",
+      "context": {
+        "path": "testdata/TCCLIQINTEG043.csv",
+        "name": "TCCLIQINTEG043.csv"
+      }
+    }
+  ]
+}

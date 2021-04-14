@@ -1,0 +1,30 @@
+{
+  "testType": "LOGIN",
+  "sector": "SE2",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "testId": "TCCLIQLOGIN016",
+  "testName": "LOGIN_SECURITYTESTING_BrowserNavigation",
+  "testDescription": "LOGIN_SECURITYTESTING_BrowserNavigation",
+  "testObjectives": "Login and Logout",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.QL.001",
+        "password": "Judgement Day 01"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    },
+    {
+    "name":"BROWSER-NAVIGATION",
+    "context":{
+        "navigation":"Back"
+       }
+    }
+ ]
+}

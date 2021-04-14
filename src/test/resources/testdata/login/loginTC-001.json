@@ -1,0 +1,24 @@
+{
+  "testType": "LOGIN",
+  "sector": "MEZOCLIQ",
+  "module": "LOGIN/LOGOUT",
+  "feature": "LOGIN/LOGOUT",
+  "group": "TEST REPORT",
+  "testId": "TCCLIQLOGIN001",
+  "testName": "LOGIN_VALIDCREDENTIALS_CorrectUsernameAndPassword",
+  "testDescription": "LOGIN_VALIDCREDENTIALS_CorrectUsernameAndPassword",
+  "testObjectives": "Login and Logout",
+  "note": "",
+  "actions": [
+    {
+      "name": "LOGIN",
+      "context": {
+        "user": "BOTZ.QL.001",
+        "password": "Judgement Day 01"
+      }
+    },
+    {
+      "name": "LOGOUT"
+    }
+  ]
+}

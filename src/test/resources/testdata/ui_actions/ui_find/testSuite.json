@@ -1,0 +1,16 @@
+{
+  "suites": [
+    {
+      "category": "UI",
+      "battery": "FIND",
+	  "suiteName": "UI_FIND",
+	  "suiteDescription": "FIND ACTIONS GENERIC UI TEST SUITE",
+	  "note": "GENERIC UI FIND",
+	  "testCases": [
+	  		"src/test/resources/testdata/ui_actions/ui_find/TCCLIQFINDFILTER.json",
+	  		"src/test/resources/testdata/ui_actions/ui_find/TCCLIQFINDGLOBALSEARCH.json",
+	  		"src/test/resources/testdata/ui_actions/ui_find/TCCLIQFINDSORT.json"	
+	  ]
+	}
+]
+}
